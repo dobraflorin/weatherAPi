@@ -1,11 +1,11 @@
 package org.example.controllers;
 
+import jakarta.validation.Valid;
 import org.example.models.dto.WeatherDTO;
 import org.example.services.WeatherService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -18,7 +18,7 @@ public class WeatherController {
     }
 
     @PostMapping("/api/weather")
-    public ResponseEntity<WeatherDTO> storeWeather(@RequestBody @Validated WeatherDTO weatherDTO) {
+    public ResponseEntity<WeatherDTO> storeWeather(@Valid @RequestBody  WeatherDTO weatherDTO) {
         return ResponseEntity.ok(weatherService.storeWeatherObservation(weatherDTO));
     }
 
@@ -33,7 +33,7 @@ public class WeatherController {
     }
 
     @PutMapping("/api/weather")
-    public ResponseEntity<WeatherDTO> updateWeather(@RequestBody @Validated WeatherDTO weatherDTO) {
+    public ResponseEntity<WeatherDTO> updateWeather(@Valid @RequestBody  WeatherDTO weatherDTO) {
         return ResponseEntity.ok(weatherService.updateWeather(weatherDTO));
     }
 }

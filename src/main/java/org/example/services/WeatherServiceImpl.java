@@ -43,7 +43,7 @@ public class WeatherServiceImpl implements WeatherService {
             if (weatherList.get(index).getCity().equalsIgnoreCase(weatherDTO.getCity())) {
                 weatherList.get(index).setWeatherTemperature(weatherDTO.getWeatherTemperature());
                 weatherList.get(index).setWeatherHumidity(weatherDTO.getWeatherHumidity());
-                log.info("Weather updated for " + weatherList.get(index).getCity());
+                log.info("Weather has been updated for " + weatherList.get(index).getCity());
                 return weatherList.get(index);
             }
         }

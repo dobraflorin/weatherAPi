@@ -1,3 +1,3 @@
-weather API
-
-parameters: Location, Humidity, Temperature , Zip Code
+- This is a simple Weather API app that logs a Weather Report for a specific weather website. It will log, update, list and erase weather reports in different cities.
+- It has been written in Java as an EDU mob programming project with all the students, me being the driver.
+- SpringFramework has been used and also Lombok library to help reduce the amount of boilerplate code.
